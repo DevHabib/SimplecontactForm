@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Bold.ttf");
+}
+
+body {
+  font-family: 'Lato', 'Open Sans';
+  position: relative;
+}
+
+$primary-color: #BBBBF9;
+
+.form-title {
+  font-weight: 700;
+}
+
+%btn {
+  border-radius: 10px;
+  font-size: 18px;
+  width: 125px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+
+%form-center {
+  height: 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.contact-form {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $primary-color;
+    width: 50%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+    right: 10%;
+    border-radius: 200px;
+    transform: rotate(145deg);
+  }
+
+  .form-bg {
+    background-color: #f8f8f6;
+    border-radius: 5px;
+    height: 600px;
+
+    .form-left {
+      background-color: $primary-color;
+      padding: 20px 10px;
+      @extend %form-center;
+      height: 100%;
+      border-radius: 5px 0 0 5px;
+      &-content {
+        text-align: center;
+        padding: 0 35px;
+        color: #fff;
+
+        .form-btn {
+          border: 1px solid #fff;
+          @extend %btn;
+        }
+      }
+    }
+
+    .form-right {
+      @extend %form-center;
+
+      .form-title {
+        color: $primary-color;
+      }
+
+      &-content {
+        text-align: center;
+
+        p {
+          color: #bbb;
+        }
+
+        .social-login {
+          ul {
+            display: block;
+
+            li {
+              display: inline-block;
+              padding: 0 10px;
+
+              a {
+                color: #333;
+
+                i {
+                  border: 1px solid #dddddd;
+                  border-radius: 50%;
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      form {
+        .form-btn {
+          margin: 0 auto;
+          text-align: center;
+          @extend %btn;
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+        }
+
+        .single-input {
+          margin-bottom: 10px;
+
+          i {
+            position: absolute;
+            z-index: 111;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            color: #b5b5b5;
+          }
+
+          input {
+            position: relative;
+            padding: 0 0 0 40px;
+            border-style: none;
+            background-color: #f1f1f9;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
