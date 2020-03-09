@@ -1,0 +1,40 @@
+/* MD Device :768px. 750px */
+@media (max-width: 1200px) {
+  .contact-form .form-bg .form-left-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .form-title {
+    font-size: 26px;
+  }
+  .contact-form .form-bg .form-left-content {
+    padding: 0;
+  }
+}
+
+/* Mobile Layout: 320px. 300px */
+@media (max-width: 767px) {
+  .contact-form {
+    overflow-y: scroll;
+    background-color: #f8f8f9;
+  }
+  .contact-form::before {
+    z-index: -1;
+    top: 35%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 0;
+    width: 100%;
+  }
+  .contact-form .form-bg {
+    background-color: #f8f8f9;
+    height: 300px;
+    z-index: 11;
+  }
+  .form-right {
+    background-color: #f8f8f9;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -5,12 +5,6 @@
           box-sizing: border-box;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
 @font-face {
   font-family: 'Lato';
   src: url("../fonts/Lato/Lato-Regular.ttf");
