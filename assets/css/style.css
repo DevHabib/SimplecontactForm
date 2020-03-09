@@ -30,6 +30,8 @@ body {
   width: 125px;
   text-transform: capitalize;
   color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .contact-form .form-bg .form-left, .contact-form .form-bg .form-right {
@@ -48,10 +50,11 @@ body {
 }
 
 .contact-form {
-  height: 100vh;
+  height: 100%;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  padding: 50px 0;
 }
 
 .contact-form:before {
@@ -91,6 +94,11 @@ body {
   border: 1px solid #fff;
 }
 
+.contact-form .form-bg .form-left-content .form-btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
 .contact-form .form-bg .form-right .form-title {
   color: #BBBBF9;
 }
@@ -116,12 +124,18 @@ body {
   color: #333;
 }
 
+.contact-form .form-bg .form-right-content .social-login ul li a:hover i {
+  color: #BBBBF9;
+}
+
 .contact-form .form-bg .form-right-content .social-login ul li a i {
   border: 1px solid #dddddd;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   line-height: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .contact-form .form-bg .form-right form .form-btn {
@@ -129,6 +143,11 @@ body {
   text-align: center;
   background-color: #BBBBF9;
   border: 1px solid #BBBBF9;
+}
+
+.contact-form .form-bg .form-right form .form-btn:hover {
+  background-color: #fff;
+  color: #333;
 }
 
 .contact-form .form-bg .form-right form .single-input {
